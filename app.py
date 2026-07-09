@@ -49,10 +49,11 @@ geography = st.selectbox(
 
 # Encoding
 gender = 1 if gender == "Male" else 0
+geo_france = 1 if geography == "France" else 0
 geo_germany = 1 if geography == "Germany" else 0
 geo_spain = 1 if geography == "Spain" else 0
 
-# DataFrame
+# DataFrame (Make sure this column order matches your training data perfectly!)
 data = pd.DataFrame({
     "CreditScore": [credit_score],
     "Gender": [gender],
@@ -63,6 +64,7 @@ data = pd.DataFrame({
     "HasCrCard": [has_cr_card],
     "IsActiveMember": [is_active],
     "EstimatedSalary": [estimated_salary],
+    "Geography_France": [geo_france],
     "Geography_Germany": [geo_germany],
     "Geography_Spain": [geo_spain]
 })
